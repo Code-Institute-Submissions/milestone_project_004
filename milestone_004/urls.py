@@ -57,6 +57,8 @@ urlpatterns = [
 
     url(r'^cart/', include('cart.urls')),
     
+    url(r'^app_001/register$',views.register,name='register'),
+
     url(r'^logout/$',views.user_logout,name='logout'),
 
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
