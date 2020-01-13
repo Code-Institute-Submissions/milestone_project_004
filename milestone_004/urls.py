@@ -30,6 +30,9 @@ from category_001.views import all_images
 from category_002 import urls as urls_category_002
 from category_002.views import all_images_002
 
+from category_003 import urls as urls_category_003
+from category_003.views import all_images_003
+
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -46,6 +49,7 @@ urlpatterns = [
 
     url(r'^category_001/', include('category_001.urls')),
     url(r'^category_002/', include('category_002.urls')),
+    url(r'^category_003/', include('category_003.urls')),
 
     url(r'^cart/', include('cart.urls')),
     
