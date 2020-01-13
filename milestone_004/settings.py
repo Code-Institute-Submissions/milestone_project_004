@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'category_001',
     'category_002',
     'category_003',
+    'category_004',
     
     
     
