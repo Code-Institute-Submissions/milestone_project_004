@@ -59,8 +59,13 @@
                     {% if user.is_authenticated %}
 
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onmouseover="myFunction()" href="{% url 'logout' %}" >Logout</a>
                     </li>
+                    <script>
+                            function myFunction() {
+                              alert("Warning! All shopping cart data will be lost if you logout.");
+                            }
+                            </script>
 
                     {% else %}
 

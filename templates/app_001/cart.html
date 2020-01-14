@@ -15,13 +15,21 @@
     <div class="container">
 
         <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Category One</h2>
+        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Shopping Cart</h2>
         <!-- Icon Divider -->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
            
-        </div>
-        
+        </div><br>
+        <div class="container">
+                <div class="row">
+                   <figure class="col-md-12">
+               <p>Total</p>
+               <p><span class="glyphicon glyphicon-euro " aria-hidden="true"></span>{{ total }}</p>
+               <a href="/" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+           </figure>
+                </div>
+               </div> 
 
 
 
@@ -60,14 +68,7 @@
             
         </figure>
      {% endfor %}
-     <div class="row">
-        <figure class="col-md-12">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="/" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-</figure>
-     </div>
-     <br><br>
+     
 </div>
 </div>
 </section>
