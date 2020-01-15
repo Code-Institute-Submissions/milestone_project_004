@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'category_002',
     'category_003',
     'category_004',
+    'checkout',
     
     
     

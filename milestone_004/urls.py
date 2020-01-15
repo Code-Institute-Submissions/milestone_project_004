@@ -24,6 +24,8 @@ from products.views import all_products
 
 from cart import urls as urls_cart
 
+from checkout import urls as urls_checkout
+
 from category_001 import urls as urls_category_001
 from category_001.views import all_images
 
@@ -56,6 +58,8 @@ urlpatterns = [
     url(r'^category_004/', include('category_004.urls')),
 
     url(r'^cart/', include('cart.urls')),
+
+    url(r'^checkout/', include('checkout.urls')),
     
     url(r'^app_001/register$',views.register,name='register'),
 

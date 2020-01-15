@@ -11174,7 +11174,10 @@ td {
     text-decoration: none;
 }
 
-
+.form-group{
+  text-align: center;
+  margin: auto;
+}
 
 
 

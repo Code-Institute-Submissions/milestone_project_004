@@ -71,9 +71,16 @@
                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onmouseover="myFunction()" href="{% url 'logout' %}" >Logout</a>
                     </li>
                     <script>
+                            var flag = false;
+
                             function myFunction() {
-                              alert("Warning! All shopping cart data will be lost if you logout.");
+                            if (!flag) {
+                                alert("Warning! All shopping cart data will be lost if you logout.");
+                                flag = true;
                             }
+                            }
+
+                            
                             </script>
 
                     {% else %}
