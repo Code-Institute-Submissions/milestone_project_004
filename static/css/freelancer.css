@@ -11043,17 +11043,19 @@ figure img {
 
 #wrapper .text {
   position: relative;
-  bottom: 10px;
+  bottom: 160px;
   left: 0px;
   visibility: hidden;
   text-decoration: none;
+  
 }
 
 #wrapper:hover .text {
   visibility: visible;
+  bottom: 160px;
   transition: .5s ease;
   text-decoration: none;
-
+  
 }
 
 .text {
