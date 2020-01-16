@@ -512,7 +512,10 @@ mark {
 
 .img-fluid {
     max-width: 100%;
-    height: auto
+    height: auto;
+    -webkit-box-shadow: 4px 4px 21px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 4px 21px -8px rgba(0,0,0,0.75);
+box-shadow: 4px 4px 21px -8px rgba(0,0,0,0.75);
 }
 
 .img-thumbnail {
@@ -10464,7 +10467,7 @@ a.text-secondary:hover {
 
 a.text-success:focus,
 a.text-success:hover {
-    color: #19692c !important
+    color: #0f6674 !important
 }
 
 .text-info {
@@ -11043,7 +11046,7 @@ figure img {
 
 #wrapper .text {
     position: relative;
-    bottom: 160px;
+    bottom: 180px;
     left: 0px;
     visibility: hidden;
     text-decoration: none;
@@ -11052,7 +11055,7 @@ figure img {
 
 #wrapper:hover .text {
     visibility: visible;
-    bottom: 160px;
+    bottom: 180px;
     transition: .5s ease;
     text-decoration: none;
    
@@ -11065,6 +11068,7 @@ figure img {
     font-size: 24px;
     z-index: 0;
     text-decoration: none;
+    bottom: 180px;
 }
 
 .container-001 {

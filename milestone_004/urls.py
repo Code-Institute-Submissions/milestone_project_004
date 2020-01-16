@@ -53,7 +53,6 @@ urlpatterns = [
     url(r'^category_002/', include('category_002.urls')),
     url(r'^category_003/', include('category_003.urls')),
     
-
     url(r'^cart/', include('cart.urls')),
 
     url(r'^checkout/', include('checkout.urls')),

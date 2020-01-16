@@ -24,6 +24,8 @@
                 <div class="divider-custom-line"></div>
 
             </div>
+            <br>
+            <br>
 
             <div class="row">
                 {% for item in cart_items %}
@@ -32,7 +34,7 @@
                             <div
                                 class="product"
                                 style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-
+                                <br>
                             <h3 class="text-002 lead">{{item.product.name}}</h3>
                             <p class="product-description">{{ item.product.description }}</p>
                             
