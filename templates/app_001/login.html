@@ -1,44 +1,37 @@
 {% extends 'app_001/base_002.html' %}
 {% block body_block %}
 
+    <section class="page-section about" id="about">
+        <div class="container">
 
-<section class="page-section about" id="about">
-  <div class="container">
+            
 
-      <!-- About Section Heading -->
-      
-      <br>
-          <br>
+            <br>
+                <br>
 
-              <!-- About Section Content -->
-              <div class="row">
-                
-                  <div class="container text-center">
-                      <div class="jumbotron">
-                        <h1 class="page-section-heading text-center text-uppercase text-secondary mb-0">Please Login</h1><br><br>
-                  
-                          <form method="post" action="{% url 'app_001:user_login' %}">
-                            {% csrf_token %}
-                            
-                            <label for="username">Username:</label>
-                            <input type="text" name="username" placeholder="Username">
-                  
-                            <label for="password"></label>
-                            <input type="password" name="password">
-                  
-                            <input class="btn btn-success" type="submit" name="" value="Login">
-                  
-                          </form><br>
-                          <p>Not regestered?</p><a href="{% url 'register' %}"> Please regester here</a>
-                      </div>
-                    </div>
-              </div>
-          </div>
-      </section>
+                    <!-- About Section Content -->
+                    <div class="row">
 
+                        <div class="container text-center">
+                            <div class="jumbotron">
+                                <h1 class="page-section-heading text-center text-uppercase text-secondary mb-0">Please Login</h1>
+                                <br><br>
 
+                                    <form method="post" action="{% url 'app_001:user_login' %}">
+                                        {% csrf_token %}
+                                        <label for="username">Username:</label>
+                                        <input type="text" name="username" placeholder="Username">
+                                            <label for="password"></label>
+                                            <input type="password" name="password">
 
+                                                <input class="btn btn-success" type="submit" name="" value="Login"></form>
+                                                <br>
+                                                    <p>Not regestered?</p>
+                                                    <a href="{% url 'register' %}">Please regester here</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
 
-
-
-{% endblock %}
+                            {% endblock %}

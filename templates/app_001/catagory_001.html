@@ -1,43 +1,49 @@
 {% extends 'app_001/base_003.html' %}
 {% block body_block %}
 
-<section class="page-section about" id="architecture">
-    <div class="container">
+    <section class="page-section about" id="architecture">
+        <div class="container">
 
-        <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">People</h2>
-        <!-- Icon Divider -->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-           
-        </div>
-        <br>
-        
+            <!-- Heading -->
 
-
-
-   
-
-
-
-    <div class="row">
-{% for images in category_001 %}
-        <figure class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-            <div id="wrapper-002"> 
-                <a href="{{images.url}}">
-                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ images.image }}')"></div>
-                </a>   
-                <br>       
-                <h3 class="text-002 lead">{{images.name}}</h3>
-                
-                    
-            </div>
+            <h2
+                class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">People</h2>
             
-        </figure>
-     {% endfor %}
-     </div>
-     <br><br>
-</div>
-</section>
+            <!-- /Heading -->
+
+            <!-- Icon Divider -->
+
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+
+            </div><br><br>
+
+            <!-- /Icon Divider -->
+
+            <!-- images -->
+
+            <div class="row">
+                {% for images in category_001 %}
+                    <figure class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div id="wrapper-002">
+                            <a href="{{images.url}}">
+                                <div
+                                    class="product"
+                                    style="background-image: url('{{ MEDIA_URL }}{{ images.image }}')"></div>
+                            </a>
+                            <br>
+                            <h3 class="text-002 lead">{{images.name}}</h3>
+
+                        </div>
+
+                    </figure>
+                {% endfor %}
+            </div>
+
+            <!-- /images -->
+
+            <br><br>
+        </div>
+    </section>
 
 {% endblock %}

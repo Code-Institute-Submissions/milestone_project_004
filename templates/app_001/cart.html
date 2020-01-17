@@ -1,80 +1,89 @@
 {% extends 'app_001/base_004.html' %}
 {% block body_block %}
 
-
-
-
-
-
-
-
-
-
-
-<section class="page-section about" id="architecture">
-    <div class="container">
-
-        <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Shopping Cart</h2>
-        <!-- Icon Divider -->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-           
-        </div><br>
+    <section class="page-section about" id="architecture">
         <div class="container">
-                <div class="row">
-                   <figure class="col-md-12">
-               <p>Total</p>
-               <p><span class="glyphicon glyphicon-euro " aria-hidden="true"></span>{{ total }}</p>
-               <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-           </figure>
-                </div>
-               </div> 
 
+            <!-- Heading -->
 
+            <h2
+                class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Shopping Cart</h2>
 
-   
+            <!-- /Heading -->
 
-
-
-    <div class="row">
-{% for item in cart_items %}
-        <figure class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-            <div id="wrapper-002"> 
-                <a href=""></a>
-                    <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-                    <br>
-                        
-                <h3 class="text-002 lead">{{item.product.name}}</h3>
-                <p class="product-description">{{ item.product.description }}</p>
-            <p>{{ item.product.price }}</p>
-            <p>
-                    <div class="input-group-addon">Qty: {{item.quantity}}</div><br>
-                
-                <form class="form-inline-001 " method="post" action="{% url 'adjust_cart' item.id %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                        <div class="input-group">
-                                
-                            <input name="quantity" type="number" min="0" max="999" class="form-control" placeholder="New Quantity"><br><br>
-                            
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                </form>
-                    
-            </div>
+            <!-- Icon Divider -->
             
-        </figure>
-     {% endfor %}
-     
-</div>
-</div>
-</section>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
 
+            </div><br><br>
 
+            <!-- Icon Divider -->
 
+            <!-- Cart contents -->
 
+            <div class="container">
+                <div class="row">
+                    <figure class="col-md-12">
+                        <p>Total</p>
+                        <p>
+                            <span class="glyphicon glyphicon-euro " aria-hidden="true"></span>{{ total }}</p>
+                        <a href="{% url 'checkout' %}" class="btn btn-success" role="button">
+                            <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+                    </figure>
+                </div>
+            </div>
 
-{% endblock %}
+            <div class="row">
+                {% for item in cart_items %}
+                    <figure class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div id="wrapper-002">
+                            <a href=""></a>
+                            <div
+                                class="product"
+                                style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+                            <br>
+
+                            <h3 class="text-002 lead">{{item.product.name}}</h3>
+                            <p class="product-description">{{ item.product.description }}</p>
+                            <p>{{ item.product.price }}</p>
+                            <p>
+                                <div class="input-group-addon">Qty:
+                                    {{item.quantity}}</div><br>
+
+                                <form
+                                    class="form-inline-001 "
+                                    method="post"
+                                    action="{% url 'adjust_cart' item.id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                                        <div class="input-group">
+
+                                            <input
+                                                name="quantity"
+                                                type="number"
+                                                min="0"
+                                                max="999"
+                                                class="form-control"
+                                                placeholder="New Quantity"><br><br>
+
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-success">
+                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+                                </form>
+
+                            </div>
+
+                        </figure>
+                    {% endfor %}
+
+                </div>
+
+                <!-- /Cart contents -->
+
+            </div>
+        </section>
+
+    {% endblock %}

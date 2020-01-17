@@ -12,10 +12,6 @@ def index(request):
 def shop(request):
     return render(request,'app_001/shop.html')
 
-#@login_required
-#def basket(request):
-    #return HttpResponseRedirect(reverse('index'))
-
 @login_required
 def user_logout(request):
     logout(request)
