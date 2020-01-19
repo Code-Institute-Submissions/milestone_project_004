@@ -194,7 +194,11 @@ To add media to S3 I create a new file called custo_storages.py and input two cl
 
 Now that the database was set up I could add all the images and products again so they are kept in the postgresql database instead of the django text admin database.
 
-### 
+### Travic CI
+
+I am now going to set up Continuous Integration that runs tests on your code every time it is pushed to GitHub.
+
+[![Build Status](https://travis-ci.com/jboyle1/milestone_project_004.svg?branch=master)](https://travis-ci.com/jboyle1/milestone_project_004)
 
 
  
