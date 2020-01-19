@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from app_001 import views
-from django.urls import include
+
 
 app_name = 'app_001'
 
