@@ -168,6 +168,8 @@ I filled in the model requirements in the database, which include a name, a URL,
 
 ### Setting up PostgreSQL database
 
+From now on I have documented the steps I have taken but I have been following the Code Institute tutorials as this is my first time setting up AWS. 
+
 In heroku I added on postgresql to the dashboard. In settings I copied the config variable URL and returned to my text editor. I installed dj-database-url and then downloaded homebrew to install postgresql.
 
 ### Configuring PostreSQL in settings.py
@@ -184,8 +186,15 @@ I already had an aws account that I logged into and then clicked on S3 on the da
 
 To connect Django to s3 I pip installed django-storages and boto3. I then add storages to installed apps in settings.py. At the bottom of the settings.py file I configure the credentials from AWS and link them to env.py to hide them. I then run the command collectstatic to copy the static files. To test the static files are being loaded I run the app in the server and inspect the network under css, It was successful.
 
-### 
+### Add Media To S3
 
+To add media to S3 I create a new file called custo_storages.py and input two classes, one for static files and one for media files that point toward settings.py Then in settings.py I edit the static files location and the static file storage settings. I run the command collectstatic again and run the app to inspect the network and can see that the media is now added to static. I refresh the bucket in AWS and see that the static files are added. I deleted all the files as these have been added into the static directory. Now I edit the media files class and in settings.py I add the media files location and the default file storage.
+
+### Upload all images and products to new postgresql database
+
+Now that the database was set up I could add all the images and products again so they are kept in the postgresql database instead of the django text admin database.
+
+### 
 
 
  
