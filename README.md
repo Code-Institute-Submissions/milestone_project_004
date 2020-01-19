@@ -166,9 +166,28 @@ Now the checkout was finished I checked it with a test card. The transaction was
 My client finally had formatted all the images for me to upload to the Django database. I firstly uploaded all the images to www.imgbb.com to generate individual urls for each image. I added a url requirement to the portfolio image model so when the user clicks on an image it becomes enlarged. 
 I filled in the model requirements in the database, which include a name, a URL, and the image.jpg (which I compressed). Then all the individual category images are displayed in the relative html files using for loops. This is the same for the online shop.
 
-### Deployment
+### Setting up PostgreSQL database
 
-To deploy this website I used Heroku. I Installed Heroku in GitPod and set up an account. After my final push to GitHub I Logged into Heroku and used the command supplied by the website to push my project to the site hosting. I connected Heroku to GitHub as a deployment method.
+In heroku I added on postgresql to the dashboard. In settings I copied the config variable URL and returned to my text editor. I installed dj-database-url and then downloaded homebrew to install postgresql.
+
+### Configuring PostreSQL in settings.py
+
+Now connected, I created a requirements.txt then went to settings.py and imported dj-database-url then reconfigured the DATABASES. I then added the Heroku config variable to the env.py. Then I migrated all existing migrations to the new postgresql database and created a new superuser.
+
+### Setting Up AWS S3 Buckets
+
+I already had an aws account that I logged into and then clicked on S3 on the dashboard. I went to create a new bucket and followed the steps on screen. Once the bucket was created I clicked on it and in properties I clicked on static web hosting. I saved the settings in this then went to permissions and then CORS configuration. I copied and pasted the CORS configuration from Code Institute and then the same for the bucket policy. I go to ‘Identity and Access Management’ to create a new group. to create a new policy I import s3 and input my arn. Once I have renewed the policy I add it to the group I previously made. I now create a user and download the csv file and put it in a folder for safe keeping on my desktop. I then test the bucket by uploading a random image.
+
+### Adding S3 To Django
+
+I already had an aws account that I logged into and then clicked on S3 on the dashboard. I went to create a new bucket and followed the steps on screen. Once the bucket was created I clicked on it and in properties I clicked on static web hosting. I saved the settings in this then went to permissions and then CORS configuration. I copied and pasted the CORS configuration from Code Institute and then the same for the bucket policy. I go to ‘Identity and Access Management’ to create a new group. to create a new policy I import s3 and input my arn. Once I have renewed the policy I add it to the group I previously made. I now create a user and download the csv file and put it in a folder for safe keeping on my desktop. I then test the bucket by uploading a random image.
+
+To connect Django to s3 I pip installed django-storages and boto3. I then add storages to installed apps in settings.py. At the bottom of the settings.py file I configure the credentials from AWS and link them to env.py to hide them. I then run the command collectstatic to copy the static files. To test the static files are being loaded I run the app in the server and inspect the network under css, It was successful.
+
+### 
+
+
+
  
  
  
