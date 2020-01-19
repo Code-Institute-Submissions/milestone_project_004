@@ -196,7 +196,7 @@ Now that the database was set up I could add all the images and products again s
 
 ### Travic CI
 
-I am now going to set up Continuous Integration that runs tests on your code every time it is pushed to GitHub.
+I am now going to set up Continuous Integration that runs tests on your code every time it is pushed to GitHub. Here is the Link to the test results.
 
 [![Build Status](https://travis-ci.com/jboyle1/milestone_project_004.svg?branch=master)](https://travis-ci.com/jboyle1/milestone_project_004)
 
