@@ -202,6 +202,10 @@ I am now going to set up Continuous Integration that runs tests on your code eve
 
 I had to update my requirements.txt in order to pass Travis-ci.
 
+### Deploying to Heroku
+
+I added all my config variables in the settings page in Heroku. I then connected to GitHub and then to my repository. In my text editor terminal I installed 'gunicorn' and also added it to the requirements.txt. After this I created a procfile
+
  
  
  
