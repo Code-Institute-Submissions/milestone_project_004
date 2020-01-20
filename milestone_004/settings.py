@@ -30,7 +30,7 @@ SECRET_KEY = 'qq$ev%!d^z-u@15ox1o07jr%9$sot%5cpu#-g4*2b4=l(6l669'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['milestone-project-004.herokuapp.com']
 
 
 # Application definition

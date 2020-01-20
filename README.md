@@ -204,7 +204,7 @@ I had to update my requirements.txt in order to pass Travis-ci.
 
 ### Deploying to Heroku
 
-I added all my config variables in the settings page in Heroku. I then connected to GitHub and then to my repository. In my text editor terminal I installed 'gunicorn' and also added it to the requirements.txt. After this I created a procfile
+I added all my config variables in the settings page in Heroku. I then connected to GitHub and then to my repository. In my text editor terminal I installed 'gunicorn' and also added it to the requirements.txt. After this I created a procfile. After this I deployed the branch but had an error when I tried to open the app so I added the app URL to allowed hosts in settings.py, pushed the code back to GitHub and deployed the branch again, successfullly deploying the project.
 
  
  
